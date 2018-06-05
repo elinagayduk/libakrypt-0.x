@@ -92,7 +92,8 @@
                                                        (ak_function_void *) ak_bckey_create_magma },
    { block_cipher, algorithm, "kuznechik", "1.2.643.7.1.1.5.2", NULL,
                                                    (ak_function_void *) ak_bckey_create_kuznechik },
-
+   { block_cipher, algorithm, "aes", "2.16.840.1.101.3.4.1", NULL,
+                                                         (ak_function_void *) ak_bckey_create_aes },
   /* 8. идентификаторы режимов работы блочных шифров.
         в дереве библиотеки: 1.2.643.2.52.1.8 - режимы работы блочных шифров
         в дереве библиотеки: 1.2.643.2.52.1.9 - параметры режимов работы блочных шифров  */

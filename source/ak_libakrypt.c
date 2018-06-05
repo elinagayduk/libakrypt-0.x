@@ -580,7 +580,12 @@
                                                    "incorrect testing of kuznechik block cipher" );
     return ak_false;
   }
-
+    /* тестируем корректность реализации блочного шифра AES*/
+    if( ak_bckey_test_aes()  != ak_true ) {
+        ak_error_message( ak_error_get_value(), __func__ ,
+                          "incorrect testing of aes block cipher" );
+        return ak_false;
+    }
   if( audit >= ak_log_maximum )
    ak_error_message( ak_error_ok, __func__ , "testing block ciphers ended successfully" );
 
